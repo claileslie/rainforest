@@ -1,0 +1,6 @@
+<h1>All Products (<%= @products.length %>)</h1>
+
+<% @products.each do |product| %>
+  <p> <%= product.name %>, <%= product.price_in_cents %>
+    <% end %>
+    
