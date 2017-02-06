@@ -1,5 +1,6 @@
 <h1>All Products (<%= @products.length %>)</h1>
-
+<%= link_to 'Add a Product', new_product_path %>
 <% @products.each do |product| %>
-  <p> <%= product.name %>, <%= product.price_in_cents %> cents
+  <p> <%= product.name %>, $<%= product.formatted_price %>
+    <%= link_to '(View Product)', product %> </p>
     <% end %>
